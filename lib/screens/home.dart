@@ -17,8 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
             title: Text("Beshence Gallery"),
             actionsPadding: .only(right: 8),
             actions: [
-              IconButton(
-                  icon: Beshence.selectedAccount!.avatar(context, 16.0),
+              Beshence.selectedAccount!.avatarButton(
+                  context: context,
                   onPressed: () {
                     showModalBottomSheet(
                         context: context,
@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               text: TextSpan(
                                                   style: Theme.of(context).textTheme.bodyLarge,
                                                   children: [
-                                                    TextSpan(text: "Beshence Gallery settings ")
+                                                    TextSpan(text: "Beshence Gallery settings")
                                                   ]
                                               )
                                           ),
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         )
                     );
                   }
-              ),
+              )
             ]
         ),
         body: SafeArea(
