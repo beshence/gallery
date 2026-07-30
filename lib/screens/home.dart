@@ -60,4 +60,10 @@ class _HomeScreenState extends State<HomeScreen> {
         )
     );
   }
+
+  @override
+  void initState() {
+    BeshenceDaemon.of(Beshence.selectedAccount!).startDaemon();
+    super.initState();
+  }
 }
